@@ -1,7 +1,7 @@
 {
-  "name": "hs-wedding-photos",
+  "name": "11ty-gallery",
   "version": "0.0.1",
-  "description": "Henna's & Sami's wedding photos",
+  "description": "11ty based image gallery project",
   "scripts": {
     "build": "npx @11ty/eleventy",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git:github.com/httpsterio/wedding-photos.git"
+    "url": "git:github.com/httpsterio/11ty-gallery.git"
   },
   "author": {
     "name": "Sami Mäkelä",
@@ -21,9 +21,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/httpsterio/wedding-photos/issues"
+    "url": "https://github.com/httpsterio/11ty-gallery/issues"
   },
-  "homepage": "https://github.com/httpsterio/wedding-photos#readme",
+  "homepage": "https://github.com/httpsterio/11ty-gallery#readme",
   "dependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-navigation": "^0.3.3",

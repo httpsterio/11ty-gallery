@@ -1,22 +1,10 @@
-@font-face {
-  font-family: 'Caveat';
-  font-weight: 400 700;
-  font-display: swap;
-  font-style: normal;
-  src: url("/static/fonts/caveat-subset.woff2") format("woff2");
-}
-
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Caveat', cursive;
   font-size:1.2rem;
   color: #010101;
-  border: 5px solid #6BBC82;
   background: #fffaea;
-  background-image: url('/static/img/bg.png');
-  background-size: 512px 512px;	
 }
 
 #photogallery {
@@ -31,91 +19,16 @@ body {
   width: 300px;
   display: inline-block;
   margin: 1rem;
-  cursor: url('/static/img/cat.png'), pointer;
-  transition: all 0.3s ease-out;
 }
 
-.gallery-img:hover{
-  -webkit-box-shadow: 0px 0px 0px 0.5rem #6BBC82;
-  -moz-box-shadow: 0px 0px 0px 0.5rem #6BBC82;
-  box-shadow: 0px 0px 0px 0.5rem #6BBC82;
-  transition: all 0.3s ease-out;
-
-}
-
-.title-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 15rem;
-  max-width:50%;
-}
-
-.title-h1 {
-  margin-top:3rem;
-  margin-bottom:0;
-}
-
-.title-h2 {
-  font-size: 3rem;
+h1 {
   text-align: center;
-  margin: 0.5rem auto 3rem auto;
+  margin: 3rem auto;
   max-width: 60%;
-  }
-
-
-.box {
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  margin: 2rem auto 3rem auto;
-  max-width: 60%;
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.5rem;
-  text-align:center;
-}
-.welcome-text {
-  width: 40ch;
-  background-color: #cbec95;
-  transform: rotate(3deg);
-}
-
-.goodbye-text {
-  width: 50ch;
-  background-color: #ecea95;
-  transform: rotate(3deg);
-}
-
-.information-text {
-  width: 60ch;
-  background-color: #92d8a6;
-  transform: rotate(-3deg);
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:visited {
-  color:black;
-}
-
-
-.bold {
-  font-variation-settings: "wght" 700;
-  cursor: url('/static/img/dog.png'), grab;
-}
-
-.regular {
-  font-variation-settings: "wght" 400;
 }
 
 footer {
   margin: 2rem auto 2rem auto;
   text-align: center;
-  font-family: monospace;
   font-size: 0.8rem;
 }

@@ -14,7 +14,7 @@ lightbox.on('uiRegister', function() {
     tagName: 'a',
 
     // SVG with outline
-    html: '<button class="download-button">Lataa kuva</button>',
+    html: '<button class="download-button">Download</button>',
 
     // Or provide full svg:
     // html: '<svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" class="pswp__icn"><path d="M20.5 14.3 17.1 18V10h-2.2v7.9l-3.4-3.6L10 16l6 6.1 6-6.1ZM23 23H9v2h14Z" /></svg>',
