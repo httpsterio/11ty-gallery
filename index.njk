@@ -1,0 +1,43 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+<h1 class="title-h1">
+<picture>
+  <source srcset="/static/img/title@2x.png 2x, /static/img/title.png 1x">
+  <img class="title-image" src="/static/img/title.png" srcset="/static/img/title@2x.png 2x, /static/img/title.png 1x" alt="Hennan ja Samin hääkuvat">
+</picture>
+</h1>
+<h2 class="title-h2">Huikeat hääkuvat!</h2>
+
+<section class="box welcome-text">
+  <p>Kiitos kun olitte meidän häissämme vieraana!</p>
+</section>
+<section class="box information-text">
+  <p>Häissä otettuja virallisia hääkuvia saa ladata itselleen ja käyttää esim. sosiaalisessa mediassa, pyydämme vain, että huomioitte valokuvaajan toiveet.</p>
+  <p><span class="bold">Kuvia ei saisi jälkikäteen muokata</span>, eli niihin ei saa esimerkiksi lisätä mitään filttereitä tai muuttaa kuvien värejä yms. Tämän lisäksi valokuvaaja toivoo, että hänet merkittäisiin kuvaajana valokuvien yhteydessä, mikäli mahdollista.</p>
+  <p>Kuvaaja: Taavi Hölttä, <a class="bold" href="https://www.instagram.com/taaviholtta_photography/">@taaviholtta_photography</a></p>
+</section>
+<section class="pswp-gallery" id="photogallery">
+  {# Iterating all objects in _data/photos.json #}
+  {% for photo in photos -%}
+
+  {# Last object in json is empty so ignore that #}
+  {% if photo.url | length %}
+    <a href="{{ photo.url }}" data-pswp-width="{{ photo.width }}" data-pswp-height="{{ photo.height }}" target="_blank" class="gallery-img">
+      <picture>
+        <!--This is the optional AVIF image-->
+        <source type="image/avif" srcset="{{ photo.thumbAvif }}">
+        <!--This is the fallback JPEG image-->
+        <img loading="lazy" alt="{{ photo.alt }}" src="{{ photo.thumb }}" width="300px" height="300px">
+      </picture>
+    </a>
+    {% endif %}
+  {%- endfor %}
+</section>
+<section class="box goodbye-text">
+  <p>Kiitos vielä kaikille vieraille ja hengessä mukana olleille!</p>
+</section>
+<footer>Sami Mäkelä — <a class="bold" href="https://httpster.io/">https://httpster.io</a></footer>

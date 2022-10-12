@@ -1,0 +1,12 @@
+[
+  {
+    "url": "/img/full/001.jpg",
+    "alt": "kuva 001",
+    "thumb": "img/thumb/jpg/001.jpg",
+    "thumbAvif": "img/thumb/avif/001.avif",
+    "thumbSize": 300,
+    "width": 3600,
+    "height": 2400
+  },
+  {}
+]
