@@ -1,6 +1,6 @@
 {
-  "title": "Page title",
+  "title": "11ty-gallery",
   "url": "",
   "language": "en",
-  "description": "Page description"
+  "description": "Simple photogallery site made with eleventy, by @httpsterio"
 }
