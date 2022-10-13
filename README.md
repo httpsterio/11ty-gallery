@@ -1,10 +1,46 @@
 # 11ty-gallery
 
-This project is a barebones project that builds an image gallery website. It uses Eleventy and Photoswipe.
+## [DEMO - https://11ty-gallery.netlify.app](https://11ty-gallery.netlify.app)
+
+This project is a barebones project that builds an image gallery website. It uses Eleventy and Photoswipe. My personal wedding album was built with this, you can see what it looks like [here](https://wedding.httpster.io).
 
 Inside are also some bash scripts to generate the necessary json markup, feel free to customize them to your needs.
 
 The scripts are shortly documented below. You can run them from the main directory, assuming you've put your files in the correct directories and don't need to change them up.
+
+## Dependencies
+- Node (16 at least)
+- npm
+- Bash
+- ffmpeg
+- graphicsmagick
+- jq
+
+## Usage
+
+- Install the necessary dependencies mentioned above.
+
+- Install eleventy and the node packages with
+
+```npm install```
+
+- Check the your image locations and necessary variable changes (like changing jpg files to pngs etc.) in the ```.sh``` scripts
+
+- Supply your own images. Default location is ```/img/full/```. If you don't have thumbnails then you should the scripts in order. If you have thumbnails, add them to the /img/thumbs/jpg folder and run the scripts starting at the avif generation.
+
+- chmod +x all the ```.sh``` files to enable execution of the scripts.
+
+- Run ```./resizeImages.sh```
+
+- Run ```./imagesToThumbnails.sh```
+
+- Run ```./thumbToAvif.sh```
+
+- Run ```./imagesToJson.sh```
+
+- Start the site with ```npm run start``` and open ```http://localhost:8080```
+
+
 
 ---
 
