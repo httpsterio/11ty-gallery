@@ -6,7 +6,9 @@ eleventyNavigation:
 ---
 <h1>Title</h1>
 
+<!--Photoswipe needs an element with a given ID-->
 <section class="pswp-gallery" id="photogallery">
+  
   {# Iterating all objects in _data/photos.json #}
   {% for photo in photos -%}
 
@@ -14,14 +16,16 @@ eleventyNavigation:
   {% if photo.url | length %}
     <a href="{{ photo.url }}" data-pswp-width="{{ photo.width }}" data-pswp-height="{{ photo.height }}" target="_blank" class="gallery-img">
       <picture>
-        <!--This is the optional AVIF image-->
-        <source type="image/avif" srcset="{{ photo.thumbAvif }}">
-        <!--This is the fallback JPEG image-->
-        <img loading="lazy" alt="{{ photo.alt }}" src="{{ photo.thumb }}" width="300px" height="300px">
+        <!--If the json has an avif thumbnail, add it-->
+        {% if photo.thumbAvif %}<source type="image/avif" srcset="{{ photo.thumbAvif }}">{% endif %}
+        
+        <!--Fallback jpg incase avif is not supported or just not generated. Also, better lighthouse score 😎-->
+        <!--Check if image has an alt text set, defaults to "alt text" if not-->
+        <img loading="lazy" {% if photo.alt %} alt="{{ photo.alt }}"{% else %} alt="alt text"{% endif %} src="{{ photo.thumb }}" width="300px" height="300px">
       </picture>
     </a>
     {% endif %}
   {%- endfor %}
 </section>
 
-<footer>Sami Mäkelä — <a class="bold" href="https://httpster.io/">https://httpster.io</a></footer>
+<footer>Sami Mäkelä — <a href="https://httpster.io/">https://httpster.io</a></footer>

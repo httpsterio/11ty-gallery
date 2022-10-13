@@ -10,6 +10,10 @@ output=_data/photos.json
 
 # folder from where images are read
 imageFolder=img/full/
+thumbFolder=img/thumb/jpg/
+avifFolder=img/thumb/avif/
+inputExt=.jpg
+thumbExt=.jpg
 
 
 
@@ -19,16 +23,17 @@ local width=$(ffprobe -v quiet -show_streams -print_format json ./$1 | jq '.[] |
 
 # removes the folder and file extension from the filename
 # replace with basename?
-local imgName=$(echo $1|sed 's|full/||g' | sed 's|img/||g' | sed s'|.jpg||g');
-local url="/img/full/$imgName";
-local thumb="img/thumb/jpg/$imgName";
-local avif="img/thumb/avif/$imgName"
+local inputFile="$1"; shift
+local imgName=$(basename -s ${inputExt} ${inputFile});
+local url="/${imageFolder}$imgName";
+local thumb="/${thumbFolder}$imgName";
+local avif="/${avifFolder}$imgName"
 local altText="kuva $imgName";
 
 echo "  {" | tee -a $output
-echo "    \"url\": \"$url.jpg\"," | tee -a $output
+echo "    \"url\": \"$url${inputExt}\"," | tee -a $output
 echo "    \"alt\": \"$altText\"," | tee -a $output
-echo "    \"thumb\": \"$thumb.jpg\"," | tee -a $output
+echo "    \"thumb\": \"$thumb${thumbExt}\"," | tee -a $output
 echo "    \"thumbAvif\": \"$avif.avif\"," | tee -a $output
 echo "    \"thumbSize\": 300", | tee -a $output
 echo "    \"width\": $width," | tee -a $output
@@ -40,7 +45,7 @@ echo "  }," | tee -a $output
 echo "[" | tee $output
 
 # loops all images in imageFolder and passes each as a param to the function
-for photo in ${imageFolder}*.jpg ; do createImageObject ${photo} ; done
+for photo in ${imageFolder}*${inputExt} ; do createImageObject ${photo} ; done
 
 # adds one empty object as the last object can't end with a comma
 echo "  {}" | tee -a $output
