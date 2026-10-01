@@ -15,9 +15,6 @@ eleventyNavigation:
   
   {# Iterating all objects in _data/photos.json #}
   {% for photo in photos -%}
-
-  {# Last object in json is empty so ignore that #}
-  {% if photo.url | length %}
     <a href="{{ photo.url }}" data-pswp-width="{{ photo.width }}" data-pswp-height="{{ photo.height }}" target="_blank" class="gallery-img">
       <picture>
         <!--If the json has an avif thumbnail, add it-->
@@ -28,7 +25,6 @@ eleventyNavigation:
         <img loading="lazy" {% if photo.alt %} alt="{{ photo.alt }}"{% else %} alt="alt text"{% endif %} src="{{ photo.thumb }}" width="300px" height="300px">
       </picture>
     </a>
-    {% endif %}
   {%- endfor %}
 </section>
 

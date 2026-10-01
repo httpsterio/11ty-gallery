@@ -3,8 +3,9 @@ const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier-terser");
 
 module.exports = function(eleventyConfig) {
-  // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy("img");
+  // Copy generated gallery assets (raw source images stay private by default)
+  eleventyConfig.addPassthroughCopy("img/gallery");
+  eleventyConfig.addPassthroughCopy("img/thumb");
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("manifest.webmanifest");
 
