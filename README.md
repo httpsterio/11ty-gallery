@@ -9,8 +9,10 @@ Inside are also some bash scripts to generate the necessary json markup, feel fr
 The scripts are shortly documented below. You can run them from the main directory, assuming you've put your files in the correct directories and don't need to change them up.
 
 ## Dependencies
-- Node (16 at least)
+- Node.js 24 LTS (or newer 22+ release)
 - npm
+
+Optional image-generation scripts additionally require:
 - Bash
 - ffmpeg
 - graphicsmagick
@@ -18,13 +20,17 @@ The scripts are shortly documented below. You can run them from the main directo
 
 ## Usage
 
-- Install the necessary dependencies mentioned above.
+- Install Node.js and npm.
 
-- Install eleventy and the node packages with
+- Install packages with
 
 ```npm install```
 
-- Check the your image locations and necessary variable changes (like changing jpg files to pngs etc.) in the ```.sh``` scripts
+- Build the site with ```npm run build```.
+
+- Start the site with ```npm run start``` and open ```http://localhost:8080```.
+
+- If you want to regenerate gallery image metadata/thumbnails with the shell scripts, check your image locations and necessary variable changes (like changing jpg files to pngs etc.) in the ```.sh``` scripts.
 
 - Supply your own images. Default location is ```/img/full/```. If you don't have thumbnails then you should the scripts in order. If you have thumbnails, add them to the /img/thumbs/jpg folder and run the scripts starting at the avif generation.
 
@@ -32,13 +38,12 @@ The scripts are shortly documented below. You can run them from the main directo
 
 - Run ```./resizeImages.sh```
 
-- Run ```./imagesToThumbnails.sh```
+- Run ```./imageToThumbnail.sh```
 
 - Run ```./thumbToAvif.sh```
 
 - Run ```./imagesToJson.sh```
 
-- Start the site with ```npm run start``` and open ```http://localhost:8080```
 
 
 
@@ -153,4 +158,3 @@ __You need to run this. Check that you're using the correct file directories and
 ```inputExt=.jpg```
 
 ```thumbExt=.jpg```
-

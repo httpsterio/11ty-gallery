@@ -1,5 +1,3 @@
-const fs = require("fs");
-const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier-terser");
 
 module.exports = function(eleventyConfig) {
