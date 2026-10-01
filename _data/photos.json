@@ -1,21 +1,156 @@
 [
   {
-    "url": "/img/full/001.jpg",
+    "url": "/img/gallery/jpeg/001-1920.jpg",
     "alt": "kuva 001",
     "thumb": "/img/thumb/jpg/001.jpg",
     "thumbAvif": "/img/thumb/avif/001.avif",
     "thumbSize": 300,
     "width": 3600,
-    "height": 2400
+    "height": 2400,
+    "sources": {
+      "jpeg": [
+        {
+          "url": "/img/gallery/jpeg/001-320.jpg",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "url": "/img/gallery/jpeg/001-640.jpg",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "url": "/img/gallery/jpeg/001-1280.jpg",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "url": "/img/gallery/jpeg/001-1920.jpg",
+          "width": 1920,
+          "height": 1280
+        }
+      ],
+      "webp": [
+        {
+          "url": "/img/gallery/webp/001-320.webp",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "url": "/img/gallery/webp/001-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "url": "/img/gallery/webp/001-1280.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "url": "/img/gallery/webp/001-1920.webp",
+          "width": 1920,
+          "height": 1280
+        }
+      ],
+      "avif": [
+        {
+          "url": "/img/gallery/avif/001-320.avif",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "url": "/img/gallery/avif/001-640.avif",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "url": "/img/gallery/avif/001-1280.avif",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "url": "/img/gallery/avif/001-1920.avif",
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    }
   },
   {
-    "url": "/img/full/002.jpg",
+    "url": "/img/gallery/jpeg/002-1920.jpg",
     "alt": "kuva 002",
     "thumb": "/img/thumb/jpg/002.jpg",
     "thumbAvif": "/img/thumb/avif/002.avif",
     "thumbSize": 300,
     "width": 3600,
-    "height": 2400
-  },
-  {}
+    "height": 2400,
+    "sources": {
+      "jpeg": [
+        {
+          "url": "/img/gallery/jpeg/002-320.jpg",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "url": "/img/gallery/jpeg/002-640.jpg",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "url": "/img/gallery/jpeg/002-1280.jpg",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "url": "/img/gallery/jpeg/002-1920.jpg",
+          "width": 1920,
+          "height": 1280
+        }
+      ],
+      "webp": [
+        {
+          "url": "/img/gallery/webp/002-320.webp",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "url": "/img/gallery/webp/002-640.webp",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "url": "/img/gallery/webp/002-1280.webp",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "url": "/img/gallery/webp/002-1920.webp",
+          "width": 1920,
+          "height": 1280
+        }
+      ],
+      "avif": [
+        {
+          "url": "/img/gallery/avif/002-320.avif",
+          "width": 320,
+          "height": 213
+        },
+        {
+          "url": "/img/gallery/avif/002-640.avif",
+          "width": 640,
+          "height": 427
+        },
+        {
+          "url": "/img/gallery/avif/002-1280.avif",
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "url": "/img/gallery/avif/002-1920.avif",
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    }
+  }
 ]

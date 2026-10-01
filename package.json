@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "11ty based image gallery project",
   "scripts": {
+    "images:process": "node ./scripts/process-images.js",
     "build": "eleventy",
     "bench": "DEBUG=Eleventy:Benchmark* eleventy",
     "watch": "eleventy --watch",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/httpsterio/11ty-gallery#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "html-minifier-terser": "^7.2.0"
+    "html-minifier-terser": "^7.2.0",
+    "sharp": "^0.35.5"
   }
 }
